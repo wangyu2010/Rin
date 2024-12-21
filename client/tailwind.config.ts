@@ -4,7 +4,7 @@ export default {
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
-  darkMode: ['selector','[data-color-mode="dark"]'],
+  darkMode: ['selector', '[data-color-mode="dark"]'],
   theme: {
     extend: {
       colors: {
@@ -21,7 +21,11 @@ export default {
         'height': 'height',
         'width': 'width',
         'spacing': 'margin, padding',
-      }
+      },
+      // 添加字体配置
+      fontFamily: {
+        sans: ['Microsoft YaHei', 'Arial', 'sans-serif'], // 替换默认的 sans-serif 字体
+      },
     },
   },
   plugins: [
