@@ -24,7 +24,8 @@ export default {
       },
       // 添加字体配置
       fontFamily: {
-        sans: ['Microsoft YaHei', 'Arial', 'sans-serif'], // 替换默认的 sans-serif 字体
+        //sans: ['Microsoft YaHei', 'Arial', 'sans-serif'], // 替换默认的 sans-serif 字体
+        sans: ['Fira Code', 'monospace'],
       },
     },
   },
