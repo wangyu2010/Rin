@@ -18,7 +18,8 @@
 
 body {
   @apply bg-background-light dark:bg-background-dark text-gray-800;
-  font-family: -apple-system, BlinkMacSystemFont, Tahoma, "Segoe UI", Arial, Roboto, "Helvetica Neue", "Noto Sans", "Source Han Serif CN VF", sans-serif !important;
+  /* Windows优先使用微软雅黑，其他系统按顺序回退 */
+  font-family: "Microsoft YaHei", -apple-system, BlinkMacSystemFont, Tahoma, "Segoe UI", Arial, Roboto, "Helvetica Neue", "Noto Sans", "Source Han Serif CN VF", sans-serif !important;
   font-size: 16px;
   line-height: 1.6;
   text-rendering: optimizeLegibility;
@@ -56,7 +57,7 @@ textarea:focus {
 .wmde-markdown h4,
 .wmde-markdown h5,
 .wmde-markdown h6 {
-  font-family: -apple-system, BlinkMacSystemFont, Tahoma, "Segoe UI", Arial, Roboto, "Helvetica Neue", "Source Han Serif CN VF", sans-serif;
+  font-family: "Microsoft YaHei", -apple-system, BlinkMacSystemFont, Tahoma, "Segoe UI", Arial, Roboto, "Helvetica Neue", "Source Han Serif CN VF", sans-serif;
   font-weight: 600;
   line-height: 1.25;
   margin-top: 1.5em;
