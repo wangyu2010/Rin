@@ -18,13 +18,7 @@
 
 body {
   @apply bg-background-light dark:bg-background-dark text-gray-800;
-  /* Windows优先使用微软雅黑，其他系统按顺序回退 */
-  font-family: "Microsoft YaHei", -apple-system, BlinkMacSystemFont, Tahoma, "Segoe UI", Arial, Roboto, "Helvetica Neue", "Noto Sans", "Source Han Serif CN VF", sans-serif !important;
-  font-size: 16px;
-  line-height: 1.6;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: Cantarell, "Source Han Serif CN VF" !important;
 }
 
 textarea:focus {
@@ -33,9 +27,7 @@ textarea:focus {
 
 .wmde-markdown {
   @apply bg-w;
-  font-family: inherit;
-  max-width: 65ch;
-  margin: 0 auto;
+  font-family: Cantarell, "Source Han Serif CN VF" !important;
 }
 
 .w-md-editor {
@@ -45,29 +37,8 @@ textarea:focus {
 .wmde-markdown img {
   @apply rounded-lg;
   display: block;
-  margin: 2em auto;
-  max-width: 100%;
-  height: auto;
-}
-
-/* 优化标题字体 */
-.wmde-markdown h1,
-.wmde-markdown h2,
-.wmde-markdown h3,
-.wmde-markdown h4,
-.wmde-markdown h5,
-.wmde-markdown h6 {
-  font-family: "Microsoft YaHei", -apple-system, BlinkMacSystemFont, Tahoma, "Segoe UI", Arial, Roboto, "Helvetica Neue", "Source Han Serif CN VF", sans-serif;
-  font-weight: 600;
-  line-height: 1.25;
-  margin-top: 1.5em;
-  margin-bottom: 0.75em;
-}
-
-/* 优化段落样式 */
-.wmde-markdown p {
-  margin-bottom: 1.5em;
-  line-height: 1.75;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 ol {
@@ -78,31 +49,14 @@ ul {
   list-style: initial;
 }
 
-/* 优化列表样式 */
-.wmde-markdown ul,
-.wmde-markdown ol {
-  margin-bottom: 1.5em;
-  padding-left: 1.5em;
-}
-
-.wmde-markdown li {
-  margin-bottom: 0.5em;
-}
-
 .link-line a {
   @apply hover:underline;
 }
 
-/* 优化代码样式 */
 .wmde-markdown code {
   @apply text-theme bg-secondary;
-  font-family: "SF Mono", Consolas, "Liberation Mono", Menlo, monospace;
-  padding: 0.2em 0.4em;
-  border-radius: 3px;
-  font-size: 0.9em;
 }
 
-/* Alert 样式 */
 .markdown-alert {
   @apply !border-l-2 border-2 rounded-lg !py-4 my-4 !px-4 !leading-snug space-y-0;
 }
@@ -131,7 +85,6 @@ ul {
   @apply flex flex-row items-center !mb-0 !text-inherit !font-bold fill-current;
 }
 
-/* 输入框样式 */
 .p-inputtext {
   @apply bg-secondary text-end px-2 py-2;
 }
@@ -140,13 +93,13 @@ ul {
   @apply mr-1 w-3;
 }
 
-/* LaTeX 数学公式样式 */
 .katex {
   overflow-x: auto;
   overflow-y: hidden;
 }
 
-/* 动画效果 */
+/* animation */
+
 @keyframes anvil {
   0% {
     transform: scale(1) translateY(0px);
@@ -179,11 +132,8 @@ ul {
   animation: anvil 0.3s cubic-bezier(0.38, 0.1, 0.36, 0.9) forwards;
 }
 
-/* 表格样式 */
 .table {
   @apply w-full border-collapse my-4;
-  font-size: 0.95em;
-  line-height: 1.5;
   overflow-x: auto;
   display: block !important;
 }
@@ -197,7 +147,8 @@ ul {
   @apply bg-slate-200 dark:bg-slate-700;
 }
 
-/* TOC 目录样式 */
+/* TOC Style */
+
 .toc {
   overflow-y: auto;
 }
@@ -255,20 +206,4 @@ a.toc-link {
 
 .is-active-link::before {
   @apply bg-theme;
-}
-
-/* 深色模式适配 */
-@media (prefers-color-scheme: dark) {
-  body {
-    @apply text-gray-200;
-  }
-
-  .wmde-markdown code {
-    @apply bg-gray-800;
-  }
-
-  .wmde-markdown blockquote {
-    background-color: #2d3748;
-    border-left-color: #4a5568;
-  }
 }
