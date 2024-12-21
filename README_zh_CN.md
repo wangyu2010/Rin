@@ -34,6 +34,7 @@ Rin 是一个基于 Cloudflare Pages + Workers + D1 + R2 全家桶的博客，�
 11. 支持自动识别文章中的第一张图片并作为头图展示在文章列表中
 12. 支持输入形如"#博客 #部署 #Cloudflare"之类的标签文本并自动解析为标签
 13. 更多特性请参考 https://xeu.life
+14. 部署了[blog](https://blog.smart-pigs.sbs/)
 
 # 文档
 
@@ -72,4 +73,5 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
 ```
