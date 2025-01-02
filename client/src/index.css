@@ -21,20 +21,28 @@
     @apply bg-background-light text-gray-800;
     font-family: 'Source Sans Pro', "Source Han Serif CN VF", sans-serif !important;
   }
-
-  [data-color-mode="dark"] body {
-    @apply bg-background-dark;
-  }
 }
 
 @layer components {
+  [data-color-mode="dark"] body {
+    @apply bg-background-dark;
+  }
+
   .wmde-markdown {
-    @apply bg-w;
+    @apply bg-white;
     font-family: 'Source Sans Pro', "Source Han Serif CN VF", sans-serif !important;
   }
 
+  [data-color-mode="dark"] .wmde-markdown {
+    @apply bg-dark;
+  }
+
   .w-md-editor {
-    @apply bg-w;
+    @apply bg-white;
+  }
+
+  [data-color-mode="dark"] .w-md-editor {
+    @apply bg-dark;
   }
 
   .wmde-markdown img {
@@ -45,7 +53,12 @@
   }
 
   .wmde-markdown code {
-    @apply text-theme bg-secondary;
+    @apply text-theme;
+    @apply bg-neutral-100;
+  }
+
+  [data-color-mode="dark"] .wmde-markdown code {
+    @apply bg-neutral-700;
   }
 }
 
